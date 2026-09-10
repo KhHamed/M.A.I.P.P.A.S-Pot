@@ -2,11 +2,27 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تجربة GitHub Pages</title>
+  <title>مساعدي الشخصي</title>
 </head>
 <body>
-  <h1>مرحباً بك 🚀</h1>
-  <p>دي صفحة تجريبية معمولة علشان تتأكد إن GitHub Pages شغال.</p>
-  <p>لو الصفحة دي ظهرت على الرابط بتاعك، يبقى التفعيل نجح 🎉</p>
+  <h1>مرحبا بك 👋</h1>
+  <p>هذا هو المساعد الشخصي المرتبط بـ Telegram.</p>
+  <form id="msgForm">
+    <input type="text" id="msg" placeholder="اكتب رسالة للبوت">
+    <button type="submit">إرسال</button>
+  </form>
+
+  <script>
+    document.getElementById("msgForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById("msg").value;
+      await fetch("https://YOUR_RAILWAY_APP_URL/webhook", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({message: {text: msg}})
+      });
+      alert("تم إرسال الرسالة للبوت!");
+    });
+  </script>
 </body>
 </html>
