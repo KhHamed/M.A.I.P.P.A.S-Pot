@@ -4,7 +4,8 @@ import os
 
 app = FastAPI()
 
-TELEGRAM_TOKEN = 8945246268:AAFw3N9MItMJGrO7aZ3wptdXprMxSu00Nzk
+TELEGRAM_TOKEN = "8945246268:AAGt1ah2UKvXz__cWJ_BH6QnrAMrCZzqsF8"  
+CHAT_ID = 
 
 TELEGRAM_TOKEN = os.getenv(TELEGRAM_TOKEN)
 CHAT_ID = os.getenv("CHAT_ID")  # رقم المحادثة أو الجروب
