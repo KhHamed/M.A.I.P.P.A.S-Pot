@@ -1,5 +1,4 @@
-fastapi
-uvicorn
-python-dotenv
 requests
-flask
+python-dotenv
+pyttsx3
+SpeechRecognition
